@@ -17,3 +17,11 @@ And after you do all of that, you think you may want to do some backpacking inst
 
 It has all National Park, National Forest, State Park, and State Forest campground locations on just ONE site, as well as reservation and permit information, recent photos and reviews, campground amenities, and trailhead names for backpacking sites. 
  
+##### Libraries used:
+##### * Mongoose (Object Data Modeling for MongoDB)
+##### * Passport.js (Authentication and Authorization)
+##### * Joi (Schema Validation)
+##### * Connect-Flash (Flash Messages)
+##### * Express-Session (Sessions & Cookies)
+##### * Cloudinary (Image Upload to Cloud)
+##### * Mapbox (Cluster and Pinned Maps)
