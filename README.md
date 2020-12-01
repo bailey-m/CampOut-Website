@@ -1,6 +1,9 @@
 # CampOut
 CampOut is a web platform that uses crowdsourcing to compile detailed campground information from campgrounds all around the world into one convenient location. It is the sole resource that someone needs to plan a camping trip.
 
+**Check it out in action here:
+https://campout-site.herokuapp.com/**
+
 ## Here's a usage scenario:
 
 You're planning a trip to Mount Rainier National Park, and you'd like to camp in the area.\
@@ -17,7 +20,7 @@ And after you do all of that, you think you may want to do some backpacking inst
 
 It has all National Park, National Forest, State Park, and State Forest campground locations on just ONE site, as well as reservation and permit information, recent photos and reviews, campground amenities, and trailhead names for backpacking sites. 
  
-##### Libraries used:
+#### Libraries used:
 ##### * Mongoose (Object Data Modeling for MongoDB)
 ##### * Passport.js (Authentication and Authorization)
 ##### * Joi (Schema Validation)
