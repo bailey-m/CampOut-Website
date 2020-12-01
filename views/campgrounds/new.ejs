@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	
+	<head>
+		<title>New Campground</title>
+	</head>
+	
+	<body>
+		<% layout('layouts/boilerplate')%>
+		<div class="row">
+			<h1 class="text-center">New Campground</h1>
+			<div class="col-md-6 offset-md-3">
+				<form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+					<div class="mb-3">
+						<label class="form-label" for="title">Title</label>
+						<input class="form-control" type="text" id="title" name="campground[title]" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="location">Location</label>
+						<input class="form-control" type="text" id="location" name="campground[location]" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" for="price">Campground Price</label>
+						<div class="input-group">
+							<span class="input-group-text" id="price-label">$</span>
+							<input type="text" class="form-control" id="price" placeholder="0.00" value="0.00" aria-label="price"
+								aria-describedby="price-label" name="campground[price]" required>
+						</div>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" for="description">Description</label>
+						<textarea class="form-control" type="text" id="description" name="campground[description]"
+							required></textarea>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+					
+					<div class="mb-3">
+						<label class="form-label" for="type">Type of Camping</label>
+						<div class="form-check form-check-inline ml-3">
+						  <input class="form-check-input" type="radio" name="campground[type]" id="Backpacking" value="Backpacking" checked>
+						  <label class="form-check-label" for="Backpacking">
+							Backpacking
+						  </label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="campground[type]" id="Car Camping" value="Car Camping">
+						  <label class="form-check-label" for="Car Camping">
+							Car Camping
+						  </label>
+						</div>
+					</div>
+					
+					<div class="form-check mb-3">
+					  <input class="form-check-input" type="checkbox" name="campground[reservation]" value="true" id="reservation">
+					  <label class="form-check-label" for="reservation">
+						Advance Reservation Required
+					  </label>
+					</div>
+					
+					<div class="mb-3">
+						<label class="form-label" for="reservation-info">Where did you make your reservation?</label>
+						<label class="form-label text-muted" for="reservation-info">Ex: Website URL, Forest Ranger District Office Address, Phone Number, etc...</label>
+						<input class="form-control" type="text" id="reservation-info" name="campground[reservationInfo]">
+					</div>
+					
+					<div class="form-check mb-3">
+					  <input class="form-check-input" type="checkbox" name="campground[permit]" value="true" id="permit">
+					  <label class="form-check-label" for="permit">
+						Permit Required
+					  </label>
+					</div>
+					
+					<div class="mb-3">
+						<label class="form-label" for="permit-info">Where did you get your permit?</label>
+						<label class="form-label text-muted" for="permit-info">Ex: Website URL, Forest Ranger District Office Address, Phone Number, etc...</label>
+						<input class="form-control" type="text" id="permit-info" name="campground[permitInfo]">
+					</div>
+					
+					<div class="mb-3">
+						<label class="form-label" for="trail-info">What trail did you take to get there?</label>
+						<label class="form-label text-muted" for="trail-info">Ex: Website URL, Trailhead Name, Trail Number, etc...</label>
+						<input class="form-control" type="text" id="trail-info" name="campground[trailInfo]">
+					</div>
+					
+					<div class="form-group mb-3" id="amenities">
+						
+					<label class="form-label" for="amenities">Campground Amenities</label>
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[waterPotable]" value="true" id="water-potable">
+					  <label class="form-check-label" for="water-potable">
+						Water (Ready to Drink)
+					  </label>
+					</div>
+					
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[waterNonPotable]" value="true" id="water-nonpotable">
+					  <label class="form-check-label" for="water-nonpotable">
+						Water (Requires Purification)
+					  </label>
+					</div>
+					
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[cellService]" value="true" id="cell-service">
+					  <label class="form-check-label" for="cell-service">
+						Cell Service
+					  </label>
+					</div>
+					
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[electricity]" value="true" id="electricity">
+					  <label class="form-check-label" for="electricity">
+						Electricity
+					  </label>
+					</div>
+					
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[bathroomPrimitive]" value="true" id="bathroom-primitive">
+					  <label class="form-check-label" for="bathroom-primitive">
+						Bathroom (Primitive)
+					  </label>
+					</div>
+					
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[bathroomPlumbing]" value="true" id="bathroom-plumbing">
+					  <label class="form-check-label" for="bathroom-plumbing">
+						Bathroom (with Plumbing)
+					  </label>
+					</div>
+					
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" name="campground[foodPurchase]" value="true" id="food-purchase">
+					  <label class="form-check-label" for="food-purchase">
+						Food for Purchase
+					  </label>
+					</div>
+					</div>
+					
+					<div class="mb-3">
+						<div class="form-file custom-file">
+							<input type="file" class="form-file-input" id="image" name="image" multiple>
+							<label class="form-file-label" for="image">
+								<span class="form-file-text custom-file-label">Choose image(s)...</span>
+								<span class="form-file-button">Browse</span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="mb-3">
+						<button class="btn btn-success">Add Campground</button>
+					</div>
+				</form>
+				<a href="/campgrounds">All Campgrounds</a>
+			</div>
+		</div>
+	</body>
+	
+	
+</html>
