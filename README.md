@@ -1,8 +1,6 @@
 # CampOut
 CampOut is a web platform that uses crowdsourcing to compile detailed campground information from campgrounds all around the world into one convenient location. It is the sole resource that someone needs to plan a camping trip.
 
-**Check it out in action here:
-https://campout-site.herokuapp.com/**
 
 ## Here's a usage scenario:
 
